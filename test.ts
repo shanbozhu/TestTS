@@ -183,3 +183,75 @@ console.log((function (a: number, b: string): string {
     console.log(x + a + b);
     return "haha"
 })(3, "zhu"));
+
+// 构造函数
+// TypeScript 也支持使用 JavaScript 内置的构造函数 Function() 来定义函数：
+// var res = new Function ([arg1[, arg2[, ...argN]],] functionBody)
+var myFunction = new Function("a", "b", "return a * b");
+var x = myFunction(4, 3);
+console.log(x);
+
+function factorial1(number: number): number {
+    if (number <= 0) { // 停止执行
+        return 1;
+    } else {
+        return (number * factorial1(number - 1)); // 调用自身
+    }
+};
+console.log(factorial1(6)); // 输出 720
+
+// Lambda 函数
+// Lambda 函数也称之为箭头函数。
+var foo = (x: number) => 10 + x // 一行语句时，return 和 {} 可省略。
+console.log(foo(100)) // 输出结果为 110
+
+var foo1 = (x: number) => {
+    x = 10 + x
+    console.log(x)
+}
+foo1(100)
+
+var disp = () => {
+    console.log("Function invoked");
+}
+disp();
+
+// 函数重载
+// 如果参数类型不同，则参数类型应设置为 any。
+// 如果参数数量不同，你可以将不同的参数设置为可选。
+function disp1(s1: string): void;
+function disp1(n1: number, s1: string): void;
+
+function disp1(x: any, y?: any): void {
+    console.log(x);
+    console.log(y);
+}
+
+disp1("abc")
+disp1(1, "xyz");
+
+let suits = ["hearts", "spades", "clubs", "diamonds"];
+
+// 定义重载签名
+function greet11(person: string): string;
+function greet11(persons: string[]): string[];
+// 定义实现签名
+function greet11(person: unknown): unknown {
+    if (typeof person === 'string') {
+        return `Hello, ${person}!`;
+    } else if (Array.isArray(person)) {
+        // return person.map(name => `Hello, ${name}!`);
+        // return person.map((name: string) => `Hello, ${name}!`);
+        // return person.map((name: string): string => {
+        //     return `Hello, ${name}!`
+        // });
+        return person.map((name: string): string => {
+            return `Hello, ${name}!`
+        });
+    }
+
+    throw new Error('Unable to greet');
+}
+
+console.log(greet11(suits[0]));
+console.log(greet11(suits));
