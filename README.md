@@ -16,13 +16,13 @@
 
 typescript：提供`tsc`命令，将ts编译为js。
 
-```
 // 将ts编译为js
-tsc test.ts
 
-// 使用es6编译
-tsc --target es6 test.ts
-```
+`tsc test.ts`
+
+// 将ts编译为js。使用es6标准编译
+
+`tsc --target es6 test.ts`
 
 // node执行js
 
