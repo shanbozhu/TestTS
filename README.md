@@ -8,7 +8,9 @@
 
 安装`node.js`时会自动安装`npm`
 
-### 2. 全局安装typescript
+---
+
+### 1. 全局安装typescript
 
 `npm i -g typescript`
 
@@ -20,17 +22,23 @@ typescript：提供`tsc`命令，将ts编译为js。
 
 `tsc test.ts --target es6`
 
+### 2. 执行js
+
 // node执行js
 
 `node test.js`
 
-### 3. 全局安装ts-node
+---
+
+### 1. 全局安装ts-node
 
 `npm i -g ts-node`
 
 `ts-node -v`
 
 ts-node：提供`ts-node`命令，直接执行ts。
+
+### 2. 执行ts
 
 // ts-node执行ts
 
