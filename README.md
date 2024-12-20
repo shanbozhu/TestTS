@@ -44,7 +44,7 @@ ts-node：提供`ts-node`命令，直接执行ts。
 
 `ts-node test.ts`
 
-解释：`ts-node`命令在内部偷偷的将ts编译为js，然后再执行js。
+解释：`ts-node`命令在内部先将ts编译为js，然后再执行js。
 
 原因：Node.js/浏览器，只识别js，不识别ts。需要先将ts编译为js，然后再执行js。
 
