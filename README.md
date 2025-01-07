@@ -10,7 +10,7 @@
 
 ---
 
-### 1. 全局安装typescript
+### 1. 安装typescript
 
 `npm i -g typescript`
 
@@ -30,7 +30,7 @@ typescript：提供`tsc`命令，将ts编译为js。
 
 ---
 
-### 1. 全局安装ts-node
+### 1. 安装ts-node
 
 `npm i -g ts-node`
 
