@@ -1,0 +1,8 @@
+# CocoaPods
+*.pyc
+__pycache__/
+.venv/
+.idea/
+.vscode/
+
+video_stream_qrcode.svg
