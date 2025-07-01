@@ -30,9 +30,23 @@
 
 `npm install typescript --save-dev`
 
-2. 验证 TypeScript 安装：
+其中：
+
+- `npm install <package-name>`：
+	- 将包安装为生产依赖（`dependencies`），记录在`package.json`的`dependencies`字段中。
+	- 这些依赖是项目在生产环境（如部署到服务器或最终运行时）所需的包。例如，运行时需要的库（如`express`、`lodash`）通常作为生产依赖安装。
+-  `npm install --save-dev <package-name>`：
+	- 将包安装为开发依赖（`devDependencies`），记录在`package.json`的`devDependencies`字段中。
+	- 这些依赖仅在开发和测试阶段需要，例如编译工具（`typescript`）、测试框架（`jest`）、或代码格式化工具（`prettier`）。在生产环境中，这些依赖不会被包含。
+- 安装依赖：
+	- 克隆项目后，运行`npm install`会安装`package.json`中列出的所有`dependencies`和`devDependencies`。
+	- 在生产环境中，运行`npm install --production`只安装`dependencies`。
+
+2. 验证`TypeScript`安装：
 
 `npx tsc --version`
+
+`npx`是`Node Package eXecute`的缩写，允许直接运行项目`node_modules`中安装的可执行文件，无需全局安装。
 
 ### 5. 创建 TypeScript 配置文件
 
@@ -86,7 +100,7 @@ console.log(greet("World"));
 
 `npx tsc`
 
-这会根据`tsconfig.json`的配置，将`TypeScript`代码编译为`JavaScript`，输出到 dist 目录。
+这会根据`tsconfig.json`的配置，将`TypeScript`代码编译为`JavaScript`，输出到`dist`目录。
 
 ### 8. 运行编译后的代码
 
@@ -153,7 +167,7 @@ my-typescript-project/
 ├── tsconfig.json
 ```
 
-### 11. 运行项目
+### 12. 运行项目
 
 - 开发模式（自动编译和运行）：`npm start`
 - 生产模式（手动编译和运行）：`npm run build` && `npm run serve`
