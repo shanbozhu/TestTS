@@ -1,6 +1,6 @@
 # TestTS
 
-### 1. 安装node
+### 1. 安装 node
 
 `brew install node`
 
@@ -174,7 +174,7 @@ my-typescript-project/
 
 ---
 
-### 1. 系统全局安装typescript
+### 1. 系统全局安装 typescript
 
 `npm install -g typescript`
 
@@ -188,7 +188,7 @@ node执行js：`node test.js`
 
 ---
 
-### 1. 系统全局安装ts-node
+### 1. 系统全局安装 ts-node
 
 `npm install -g ts-node`
 
