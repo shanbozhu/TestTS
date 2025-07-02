@@ -176,7 +176,7 @@ my-typescript-project/
 
 ### 1. 系统全局安装typescript
 
-`npm i -g typescript`
+`npm install -g typescript`
 
 `tsc -v`
 
@@ -190,7 +190,7 @@ node执行js：`node test.js`
 
 ### 1. 系统全局安装ts-node
 
-`npm i -g ts-node`
+`npm install -g ts-node`
 
 `ts-node -v`
 
