@@ -1,6 +1,6 @@
 # TestTS
 
-### 1. 安装node
+### 1. 安装 node
 
 `brew install node`
 
@@ -18,13 +18,13 @@
 
 `cd my-typescript-project`
 
-### 3. 初始化npm项目
+### 3. 初始化 npm 项目
 
 1. 初始化项目，生成`package.json`文件
 
 `npm init -y`
 
-### 4. 安装typescript
+### 4. 安装 typescript
 
 1. 安装`typescript`作为开发依赖：
 
@@ -48,7 +48,7 @@
 
 `npx`是`Node Package eXecute`的缩写，允许直接运行项目`node_modules`中安装的可执行文件，无需全局安装。
 
-### 5. 创建TypeScript配置文件
+### 5. 创建 TypeScript 配置文件
 
 1. 生成`tsconfig.json`文件：
 
@@ -59,17 +59,17 @@
 ```
 {
   "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
-    "rootDir": "./src",
-    "outDir": "./dist",
-    "strict": true,
-    "esModuleInterop": true,
+    "target": "es2016",         // 目标 JavaScript 版本
+    "module": "commonjs",       // 模块系统（Node.js 用 commonjs）
+    "rootDir": "./src",         // 源码目录
+    "outDir": "./dist",         // 编译输出目录
+    "strict": true,             // 启用严格模式
+    "esModuleInterop": true,    // 兼容 CommonJS 和 ES Modules
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*"],      // 包含编译的文件
+  "exclude": ["node_modules"]   // 排除的文件
 }
 ```
 `rootDir`：TypeScript 源文件目录。
@@ -91,10 +91,18 @@
 function greet(name: string): string {
   return `Hello, ${name}!`;
 }
+
 console.log(greet("World"));
 ```
+```
+const greet = (name: string): string => {
+  return `Hello, ${name}!`;
+};
 
-### 7. 编译TypeScript代码
+console.log(greet("TypeScript"));
+```
+
+### 7. 编译 TypeScript 代码
 
 1. 编译`src/index.ts`到`dist/index.js`：
 
@@ -114,17 +122,35 @@ console.log(greet("World"));
 
 1. 安装`ts-node`（直接运行`TypeScript`代码，无需手动编译）：
 
-`npm install ts-node --save-dev`
+`npm install ts-node @types/node --save-dev`
 
 2. 运行`TypeScript`文件：
 
 `npx ts-node src/index.ts`
 
-3. 添加`nodemon`（自动重启开发服务器）：
+3. 使用`Node.js`脚本，修改`package.json`，添加脚本：
+
+```
+{
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  }
+}
+```
+运行命令：
+```
+npm run build    # 编译
+npm run start    # 运行编译后的代码
+npm run dev      # 直接运行 TS 代码（开发模式）
+```
+
+4. 添加`nodemon`（自动重启开发服务器）：
 
 `npm install nodemon --save-dev`
 
-4. 在`package.json`中添加脚本：
+5. 使用`Node.js`脚本，修改`package.json`，添加脚本：
 
 ```
 {
@@ -174,7 +200,7 @@ my-typescript-project/
 
 ---
 
-### 1. 系统全局安装typescript
+### 1. 系统全局安装 typescript
 
 `npm install -g typescript`
 
@@ -182,13 +208,13 @@ my-typescript-project/
 
 typescript：提供`tsc`命令，将ts编译为js。
 
-### 2. 执行js
+### 2. 执行 js
 
 node执行js：`node test.js`
 
 ---
 
-### 1. 系统全局安装ts-node
+### 1. 系统全局安装 ts-node
 
 `npm install -g ts-node`
 
@@ -196,7 +222,7 @@ node执行js：`node test.js`
 
 ts-node：提供`ts-node`命令，直接执行ts。
 
-### 2. 执行ts
+### 2. 执行 ts
 
 ts-node执行ts：`ts-node test.ts`
 
