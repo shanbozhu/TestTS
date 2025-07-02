@@ -24,6 +24,22 @@
 
 `npm init -y`
 
+内容如下：
+```
+{
+  "name": "testts",
+  "version": "1.0.0",
+  "description": "### 1. 安装 node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+```
+
 ### 4. 安装 typescript
 
 1. 安装`typescript`作为开发依赖：

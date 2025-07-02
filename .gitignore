@@ -5,4 +5,6 @@ __pycache__/
 .idea/
 .vscode/
 
+node_modules/
+
 video_stream_qrcode.svg
