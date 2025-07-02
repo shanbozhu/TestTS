@@ -24,9 +24,9 @@
 
 `npm init -y`
 
-### 4. 安装TypeScript
+### 4. 安装typescript
 
-1. 安装`TypeScript`作为开发依赖：
+1. 安装`typescript`作为开发依赖：
 
 `npm install typescript --save-dev`
 
@@ -42,7 +42,7 @@
 	- 克隆项目后，运行`npm install`会安装`package.json`中列出的所有`dependencies`和`devDependencies`。
 	- 在生产环境中，运行`npm install --production`只安装`dependencies`。
 
-2. 验证`TypeScript`安装：
+2. 验证`typescript`安装：
 
 `npx tsc --version`
 
