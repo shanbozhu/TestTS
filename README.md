@@ -1,6 +1,6 @@
 # TestTS
 
-### 1. 安装 node
+### 1. 安装node
 
 `brew install node`
 
@@ -18,13 +18,13 @@
 
 `cd my-typescript-project`
 
-### 3. 初始化 npm 项目
+### 3. 初始化npm项目
 
 1. 初始化项目，生成`package.json`文件
 
 `npm init -y`
 
-### 4. 安装 TypeScript
+### 4. 安装TypeScript
 
 1. 安装`TypeScript`作为开发依赖：
 
@@ -48,7 +48,7 @@
 
 `npx`是`Node Package eXecute`的缩写，允许直接运行项目`node_modules`中安装的可执行文件，无需全局安装。
 
-### 5. 创建 TypeScript 配置文件
+### 5. 创建TypeScript配置文件
 
 1. 生成`tsconfig.json`文件：
 
@@ -94,7 +94,7 @@ function greet(name: string): string {
 console.log(greet("World"));
 ```
 
-### 7. 编译 TypeScript 代码
+### 7. 编译TypeScript代码
 
 1. 编译`src/index.ts`到`dist/index.js`：
 
@@ -174,7 +174,7 @@ my-typescript-project/
 
 ---
 
-### 1. 系统全局安装 typescript
+### 1. 系统全局安装typescript
 
 `npm install -g typescript`
 
@@ -188,7 +188,7 @@ node执行js：`node test.js`
 
 ---
 
-### 1. 系统全局安装 ts-node
+### 1. 系统全局安装ts-node
 
 `npm install -g ts-node`
 
