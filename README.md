@@ -1,6 +1,6 @@
 [TOC]
 
-## 1. 安装 node
+## 1、安装 node
 
 `brew install node`
 
@@ -10,7 +10,7 @@
 
 - 安装`node.js`时会自动安装`npm`
 
-## 2. 创建项目目录
+## 2、创建项目目录
 
 1. 创建一个新目录并进入：
 
@@ -18,7 +18,7 @@
 
 `cd my-typescript-project`
 
-## 3. 初始化 npm 项目
+## 3、初始化 npm 项目
 
 1. 初始化项目，生成`package.json`文件
 
@@ -40,7 +40,7 @@
 }
 ```
 
-## 4. 安装 typescript
+## 4、安装 typescript
 
 1. 安装`typescript`作为开发依赖：
 
@@ -49,14 +49,14 @@
 其中：
 
 - `npm install <package-name>`：
-	- 将包安装为生产依赖（`dependencies`），记录在`package.json`的`dependencies`字段中。
-	- 这些依赖是项目在生产环境（如部署到服务器或最终运行时）所需的包。例如，运行时需要的库（如`express`、`lodash`）通常作为生产依赖安装。
--  `npm install --save-dev <package-name>`：
-	- 将包安装为开发依赖（`devDependencies`），记录在`package.json`的`devDependencies`字段中。
-	- 这些依赖仅在开发和测试阶段需要，例如编译工具（`typescript`）、测试框架（`jest`）、或代码格式化工具（`prettier`）。在生产环境中，这些依赖不会被包含。
+  - 将包安装为生产依赖（`dependencies`），记录在`package.json`的`dependencies`字段中。
+  - 这些依赖是项目在生产环境（如部署到服务器或最终运行时）所需的包。例如，运行时需要的库（如`express`、`lodash`）通常作为生产依赖安装。
+- `npm install --save-dev <package-name>`：
+  - 将包安装为开发依赖（`devDependencies`），记录在`package.json`的`devDependencies`字段中。
+  - 这些依赖仅在开发和测试阶段需要，例如编译工具（`typescript`）、测试框架（`jest`）、或代码格式化工具（`prettier`）。在生产环境中，这些依赖不会被包含。
 - 安装依赖：
-	- 克隆项目后，运行`npm install`会安装`package.json`中列出的所有`dependencies`和`devDependencies`。
-	- 在生产环境中，运行`npm install --production`只安装`dependencies`。
+  - 克隆项目后，运行`npm install`会安装`package.json`中列出的所有`dependencies`和`devDependencies`。
+  - 在生产环境中，运行`npm install --production`只安装`dependencies`。
 
 2. 验证`typescript`安装：
 
@@ -64,7 +64,7 @@
 
 `npx`是`Node Package eXecute`的缩写，允许直接运行项目`node_modules`中安装的可执行文件，无需全局安装。
 
-## 5. 创建 TypeScript 配置文件
+## 5、创建 TypeScript 配置文件
 
 1. 生成`tsconfig.json`文件：
 
@@ -94,7 +94,7 @@
 
 `strict`：启用严格类型检查。
 
-## 6. 创建源代码目录和文件
+## 6、创建源代码目录和文件
 
 1. 创建`src`目录：
 
@@ -110,6 +110,7 @@ function greet(name: string): string {
 
 console.log(greet("World"));
 ```
+
 ```
 const greet = (name: string): string => {
   return `Hello, ${name}!`;
@@ -118,7 +119,7 @@ const greet = (name: string): string => {
 console.log(greet("TypeScript"));
 ```
 
-## 7. 编译 TypeScript 代码
+## 7、编译 TypeScript 代码
 
 1. 编译`src/index.ts`到`dist/index.js`：
 
@@ -126,7 +127,7 @@ console.log(greet("TypeScript"));
 
 这会根据`tsconfig.json`的配置，将`TypeScript`代码编译为`JavaScript`，输出到`dist`目录。
 
-## 8. 运行编译后的代码
+## 8、运行编译后的代码
 
 1. 运行编译后的`JavaScript`文件：
 
@@ -134,7 +135,7 @@ console.log(greet("TypeScript"));
 
 - 输出：`Hello, World!`
 
-## 9. 添加开发工具（可选）
+## 9、添加开发工具（可选）
 
 1. 安装`ts-node`（直接运行`TypeScript`代码，无需手动编译）：
 
@@ -155,6 +156,7 @@ console.log(greet("TypeScript"));
   }
 }
 ```
+
 运行命令：
 ```
 npm run build    # 编译
@@ -182,7 +184,7 @@ npm run dev      # 直接运行 TS 代码（开发模式）
 - 构建项目：`npm run build`
 - 运行编译后的代码：`npm run serve`
 
-## 10. 添加第三方库（可选）
+## 10、添加第三方库（可选）
 
 1. 例如，安装`lodash`及其`类型声明`：
 
@@ -195,7 +197,7 @@ import _ from 'lodash';
 console.log(_.capitalize("typescript"));
 ```
 
-## 11. 项目结构
+## 11、项目结构
 
 ```
 my-typescript-project/
@@ -209,14 +211,14 @@ my-typescript-project/
 ├── tsconfig.json
 ```
 
-## 12. 运行项目
+## 12、运行项目
 
 - 开发模式（自动编译和运行）：`npm start`
 - 生产模式（手动编译和运行）：`npm run build` && `npm run serve`
 
 ---
 
-## 1. 系统全局安装 typescript
+## 1、系统全局安装 typescript
 
 `npm install -g typescript`
 
@@ -224,13 +226,13 @@ my-typescript-project/
 
 typescript：提供`tsc`命令，将ts编译为js。
 
-## 2. 执行 js
+## 2、执行 js
 
 node执行js：`node test.js`
 
 ---
 
-## 1. 系统全局安装 ts-node
+## 1、系统全局安装 ts-node
 
 `npm install -g ts-node`
 
@@ -238,7 +240,7 @@ node执行js：`node test.js`
 
 ts-node：提供`ts-node`命令，直接执行ts。
 
-## 2. 执行 ts
+## 2、执行 ts
 
 ts-node执行ts：`ts-node test.ts`
 
