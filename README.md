@@ -31,18 +31,18 @@ draft: false
 `npm init -y`
 
 内容如下：
-```
+```json
 {
-  "name": "testts",
+  "name": "my-typescript-project",
   "version": "1.0.0",
-  "description": "### 1. 安装 node",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }
 ```
 
@@ -68,7 +68,7 @@ draft: false
 
 `npx tsc --version`
 
-`npx`是`Node Package eXecute`的缩写，允许直接运行项目`node_modules`中安装的可执行文件，无需全局安装。
+`npx`是`Node Package eXecute`的缩写，允许直接运行项目里的`node_modules`目录中安装的`typescript`可执行文件，无需全局安装。
 
 ## 5、创建 TypeScript 配置文件
 
@@ -78,7 +78,7 @@ draft: false
 
 2. 修改`tsconfig.json`文件，设置基本的编译选项：
 
-```
+```json
 {
   "compilerOptions": {
     "target": "es2016",         // 目标 JavaScript 版本
@@ -108,7 +108,7 @@ draft: false
 
 2. 在`src`目录下创建`index.ts`文件：
 
-```
+```typescript
 // src/index.ts
 function greet(name: string): string {
   return `Hello, ${name}!`;
@@ -116,8 +116,8 @@ function greet(name: string): string {
 
 console.log(greet("World"));
 ```
-
-```
+或
+```typescript
 const greet = (name: string): string => {
   return `Hello, ${name}!`;
 };
@@ -153,7 +153,7 @@ console.log(greet("TypeScript"));
 
 3. 使用`Node.js`脚本，修改`package.json`，添加脚本：
 
-```
+```json
 {
   "scripts": {
     "build": "tsc",
@@ -176,7 +176,7 @@ npm run dev      # 直接运行 TS 代码（开发模式）
 
 5. 使用`Node.js`脚本，修改`package.json`，添加脚本：
 
-```
+```json
 {
   "scripts": {
     "start": "nodemon src/index.ts",
