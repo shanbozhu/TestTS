@@ -224,7 +224,7 @@ my-typescript-project/
 
 `tsc -v`
 
-typescript：提供`tsc`命令，将ts编译为js。
+typescript：提供`tsc`命令，将 ts 编译为 js。
 
 ## 2、执行 js
 
@@ -238,14 +238,14 @@ node执行js：`node test.js`
 
 `ts-node -v`
 
-ts-node：提供`ts-node`命令，直接执行ts。
+ts-node：提供`ts-node`命令，直接执行 ts。
 
 ## 2、执行 ts
 
 ts-node执行ts：`ts-node test.ts`
 
-解释：`ts-node`命令在内部先将ts编译为js，然后再执行js。
+解释：`ts-node`命令在内部先将 ts 编译为 js，然后再执行 js。
 
-原因：Node.js/浏览器，只识别js，不识别ts。需要先将ts编译为js，然后再执行js。
+原因：Node.js / 浏览器，只识别 js，不识别 ts。需要先将 ts 编译为 js，然后再执行 js。
 
 参考文档：https://www.jianshu.com/p/5f5cdcbc8b00
