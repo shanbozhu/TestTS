@@ -1,3 +1,9 @@
+---
+title: "TypeScript 环境搭建指南"
+date: 2019-05-20T19:14:49+08:00
+draft: false
+---
+
 [TOC]
 
 ## 1、安装 node
