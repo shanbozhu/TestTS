@@ -234,7 +234,7 @@ typescript：提供`tsc`命令，将 ts 编译为 js。
 
 ## 2、执行 js
 
-node执行js：`node test.js`
+node 执行 js：`node test.js`
 
 ---
 
@@ -248,7 +248,7 @@ ts-node：提供`ts-node`命令，直接执行 ts。
 
 ## 2、执行 ts
 
-ts-node执行ts：`ts-node test.ts`
+ts-node 执行 ts：`ts-node test.ts`
 
 解释：`ts-node`命令在内部先将 ts 编译为 js，然后再执行 js。
 
